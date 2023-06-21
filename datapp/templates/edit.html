@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>
+    <h1>ADD PRODUCTS</h1>
+    <CENTER>
+        <form method="post" action="/edit_product_details/{{products.id}}">
+            {% csrf_token %}
+            <label>Enter Product Name</label><BR>
+            <input type="text" name="product_name" value="{{products.product_name}}"><br>
+            <label>EnterProduct Description</label><BR>
+            <input type="text" name="description" value="{{products.description}}"><br>
+            <label>Enter Product Quantity</label><BR>
+            <input type="text" name="quantity" value="{{products.quantity}}"><br>
+            <label>Enter Product Price</label><BR>
+            <input type="number" name="price" value="{{products.price}}"><br>
+            <button type="submit">UPDATE</button><br>
+
+            <INPUT type="button" value="previous page" onclick="javascript:history.go(-1);">
+
+        </form>
+    </CENTER>
+   </center> 
+</body>
+</html>

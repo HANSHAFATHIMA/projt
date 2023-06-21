@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+    <h1>ADD PRODUCTS</h1></center>
+    <center>
+    <form method="post" action="{% url 'add_product_details' %}">
+        {% csrf_token %}
+        <label>Enter Product name</label><br>
+        <input type="text" name="product_name"><br>
+        <label>Enter Product Description</label><br>
+        <input type="text" name="description"><br>
+        <label>Enter Product Quantity</label><br>
+        <input type="text" name="quantity"><br>
+        <label>Enter Product Price</label><br>
+        <input type="text" name="price"><br><br>
+        <button type="submit" style="background-color: rgb(12, 61, 12);">SUBMIT</button>
+    </form>
+    </center>
+
+</body>
+</html>
